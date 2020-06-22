@@ -9,6 +9,7 @@ import {Container,} from "semantic-ui-react"
 
 import './App.css';
 
+// in the component we are adding routes to our components
 function App() {
   return (
    <>
