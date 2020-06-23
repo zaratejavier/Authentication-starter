@@ -1,7 +1,7 @@
 import React from "react"
 import axios from "axios"
 
-const AuthContext = React.createContext(); //This is what our child components will use to get the data from this provider. 
+export const AuthContext = React.createContext(); //This is what our child components will use to get the data from this provider. 
 export const AuthConsumer = AuthContext.Consumer; //what the child component uses to access the data from the provider.
 
 export class AuthProvider extends React.Component {
