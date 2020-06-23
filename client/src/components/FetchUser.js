@@ -18,7 +18,7 @@ export default function FetchUser(props){
   async function checkLocalToken(){
     if(localStorage.getItem("access-token")){
       try {
-        const res = await axios.get("api/auth/validate_token");
+        const res = await axios.get("/api/auth/validate_token");
         setUser(res.data.data)
       }catch (e){
         console.log(e)
