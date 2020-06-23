@@ -13,7 +13,7 @@ class Login extends React.Component {
 
 
   handleChange = (e) => {
-    const {name, value} = e.target //destructuring the state
+    const {name, value} = e.target 
     this.setState({[name]: value}) // the name we get from the user we put it in the state
   }
 
