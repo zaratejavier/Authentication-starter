@@ -6,12 +6,13 @@ export default function FetchUser(props){
   const [loaded, setloaded] = useState(false)
   const {authenticated, setUser} = useContext(AuthContext)
 
-  useEffect(async () =>{
-    if(!authenticated){
+  useEffect(async () => { // should not be async
+    if (!authenticated) {
       await checkLocalToken();
     }
-    setloaded(true) //set loaded to true and render all of the other components
-  },[])
+    setLoaded(true);
+    checkUser();
+  }, []);
 
 
   // The checkLocalToken function will check to see if we have a token saved in localStorage and retrieve it if it finds one.  
